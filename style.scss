@@ -5,6 +5,29 @@ $text-color: white;
 $title-font: "Bungee", cursive;
 $content-font: "Mullish", sans-serif;
 
+$xl: 80em; // 4k/hi-res desktop
+$lg: 64em; // 1080/hi-res laptops
+$med: 50em; // hi-res tablets/low-res laptops
+$sm: 28em; // mobile/low-res tablets
+$phone-height: 600px;
+
+@mixin responsive($query)
+{
+    @media only screen and (min-width: $query) and (min-height: $phone-height)
+    {
+        @content;
+    }
+}
+
+// makes require mobile device height
+@mixin responsiveMobile($query)
+{
+    @media only screen and (min-width: $query) and (max-height: $phone-height)
+    {
+        @content;
+    }
+}
+
 *
 {
     margin: 0;
@@ -35,17 +58,55 @@ main
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    padding: 35px 10px;
     margin: 0 100px;
 
-    & > div
+    width: 100%; // new
+    flex-wrap: wrap; // new
+    padding: 50px 30px; // new
+    flex-direction: column;
+
+    @include responsiveMobile($med)
+    {
+        background-color: blue;
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    @include responsive($med)
+    {
+        //background-color: orange;
+        padding: 100px 10px; // new
+
+        & > section
+        {
+            //margin: 200px 0;
+        }
+    }
+
+    @include responsive($lg)
+    {
+        //background-color: red;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 80px 20px;
+    }
+
+    @include responsive($xl)
+    {
+        //background-color: purple;
+    }
+
+    section
     {
         display: flex;
         flex-direction: column;
-        margin: 0 20px;
+        //margin: 0 20px;
         border: 1px solid $primary-color;
         padding: 20px 25px;
         border-radius: 20px;
+        margin: 0 20px 30px 20px; // new
 
         label
         {
@@ -70,20 +131,30 @@ main
             outline: none;
         }
 
-        textarea
-        {
-            resize: none;
-        }
-
         #rand-voice-button, #reset-button
         {
             margin-top: 25px;
         }
+    }
 
-        .voice-row
+    #text-section
+    {
+        textarea
+        {
+            resize: none;
+        }
+    }
+
+    #voice-section
+    {
+
+    }
+
+    #property-section
+    {
+        .property-row
         {
             display: flex;
-            //justify-content: center;
             align-items: center;
 
             label

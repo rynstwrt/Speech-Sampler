@@ -20,31 +20,31 @@
 <body>
     <main>
         <!--  TEXT SECTION  -->
-        <div>
+        <section id="text-section">
             <label for="text-area">Text</label>
             <textarea id="text-area" rows="4" cols="25" placeholder="Enter your text here" value="test TEST"></textarea>
-        </div>
+        </section>
 
         <!--  VOICE SECTION  -->
-        <div>
+        <section id="voice-section">
             <label for="voice-select">Voice</label>
             <select id="voice-select"></select>
             <button id="rand-voice-button">Random</button>
-        </div>
+        </section>
 
         <!--  RATE AND PITCH SECTION  -->
-        <div>
+        <section id="property-section">
             <label>Properties</label>
-            <div class="voice-row">
+            <div class="property-row">
                 <label for="rate-input">Rate: </label>
                 <input id="rate-input" type="range" min="0.1" max="5" step=".01" value="1">
             </div>
-            <div class="voice-row">
+            <div class="property-row">
                 <label for="pitch-input">Pitch: </label>
                 <input id="pitch-input" type="range" min="0" max="2" step="0.01" value="1">>
             </div>
             <button id="reset-button">Reset</button>
-        </div>
+        </section>
 
         <!--  SUBMIT BUTTON SECTION  -->
         <button id="submit-button">Play</button>

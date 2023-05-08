@@ -24,25 +24,49 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  padding: 35px 10px;
   margin: 0 100px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 30px;
+  flex-direction: column;
 }
-main > div {
+@media only screen and (min-width: 50em) and (max-height: 600px) {
+  main {
+    background-color: blue;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 50em) and (min-height: 600px) {
+  main {
+    padding: 100px 10px;
+  }
+}
+@media only screen and (min-width: 64em) and (min-height: 600px) {
+  main {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 80px 20px;
+  }
+}
+main section {
   display: flex;
   flex-direction: column;
-  margin: 0 20px;
   border: 1px solid #F87060;
   padding: 20px 25px;
   border-radius: 20px;
+  margin: 0 20px 30px 20px;
 }
-main > div label {
+main section label {
   margin-bottom: 10px;
   font-family: "Bungee", cursive;
   text-transform: uppercase;
   color: #F87060;
   font-weight: bold;
 }
-main > div textarea, main > div select {
+main section textarea, main section select {
   padding: 7px 5px;
   font-size: 12px;
   font-family: "Mullish", sans-serif;
@@ -54,25 +78,25 @@ main > div textarea, main > div select {
   border-radius: 5px;
   outline: none;
 }
-main > div textarea {
-  resize: none;
-}
-main > div #rand-voice-button, main > div #reset-button {
+main section #rand-voice-button, main section #reset-button {
   margin-top: 25px;
 }
-main > div .voice-row {
+main #text-section textarea {
+  resize: none;
+}
+main #property-section .property-row {
   display: flex;
   align-items: center;
 }
-main > div .voice-row label {
+main #property-section .property-row label {
   margin: 2px 5px 2px 0;
   font-size: 12px;
   font-family: "Mullish", sans-serif;
 }
-main > div .voice-row:first-of-type {
+main #property-section .property-row:first-of-type {
   margin-top: 10px;
 }
-main > div .voice-row:last-of-type {
+main #property-section .property-row:last-of-type {
   margin-top: 5px;
 }
 main button {

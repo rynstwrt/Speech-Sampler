@@ -35,7 +35,7 @@ function populateVoiceList()
 
 function speak()
 {
-    const text = (textArea.value) ? textArea.value : "Hello World";
+    const text = (textArea.value) ? textArea.value : textArea.placeholder;
     const lines = text.split("\n");
 
     for (let i = 0; i < lines.length; ++i)
