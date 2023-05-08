@@ -75,35 +75,32 @@ main
             resize: none;
         }
 
-        #rand-voice-button
+        #rand-voice-button, #reset-button
         {
-            margin-top: 15px;
+            margin-top: 25px;
         }
 
         .voice-row
         {
             display: flex;
-            justify-content: center;
+            //justify-content: center;
             align-items: center;
-            padding: 2px 0;
 
             label
             {
-                margin: 2px 5px;
+                margin: 2px 5px 2px 0;
+                font-size: 12px;
+                font-family: $content-font;
             }
 
             &:first-of-type
             {
-                margin-top: 20px;
+                margin-top: 10px;
             }
 
-            #rate-input, #pitch-input
+            &:last-of-type
             {
-                //padding: 7px 5px;
-                //background-color: transparent;
-                //color: $text-color;
-                //border: 1px solid $primary-color;
-                //border-radius: 5px;
+                margin-top: 5px;
             }
         }
     }

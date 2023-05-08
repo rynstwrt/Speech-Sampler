@@ -57,20 +57,23 @@ main > div textarea, main > div select {
 main > div textarea {
   resize: none;
 }
-main > div #rand-voice-button {
-  margin-top: 15px;
+main > div #rand-voice-button, main > div #reset-button {
+  margin-top: 25px;
 }
 main > div .voice-row {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2px 0;
 }
 main > div .voice-row label {
-  margin: 2px 5px;
+  margin: 2px 5px 2px 0;
+  font-size: 12px;
+  font-family: "Mullish", sans-serif;
 }
 main > div .voice-row:first-of-type {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+main > div .voice-row:last-of-type {
+  margin-top: 5px;
 }
 main button {
   background-color: transparent;

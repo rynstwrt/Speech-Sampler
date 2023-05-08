@@ -1,8 +1,11 @@
 const textArea = document.querySelector("#text-area");
+
 const voiceSelect = document.querySelector("#voice-select");
 const randVoiceButton = document.querySelector("#rand-voice-button");
 const rateInput = document.querySelector("#rate-input");
 const pitchInput = document.querySelector("#pitch-input");
+const resetButton = document.querySelector("#reset-button");
+
 const submitButton = document.querySelector("#submit-button");
 
 let voices;
@@ -57,6 +60,12 @@ function selectRandomVoice()
     options.find(o => o.text === randomVoice).selected = true;
 }
 
+function resetVoice()
+{
+    rateInput.value = "1";
+    pitchInput.value = "1";
+}
+
 function init()
 {
     populateVoiceList();
@@ -70,6 +79,7 @@ function init()
 
 submitButton.addEventListener("click", () => speak());
 randVoiceButton.addEventListener("click", () => selectRandomVoice());
+resetButton.addEventListener("click", () => resetVoice());
 
 init();
 
