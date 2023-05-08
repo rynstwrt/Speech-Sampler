@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #212121;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: "Bungee", cursive;
+}
+
+main {
+  border: 1px solid #F87060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 35px 10px;
+  margin: 0 100px;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  border: 1px solid #F87060;
+  padding: 20px 25px;
+  border-radius: 20px;
+}
+main > div label {
+  margin-bottom: 10px;
+  font-family: "Bungee", cursive;
+  text-transform: uppercase;
+  color: #F87060;
+  font-weight: bold;
+}
+main > div textarea, main > div select {
+  padding: 7px 5px;
+  font-size: 12px;
+  font-family: "Mullish", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #F87060;
+  border-radius: 5px;
+  outline: none;
+}
+main > div textarea {
+  resize: none;
+}
+main > div #rand-voice-button {
+  margin-top: 15px;
+}
+main > div .voice-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0;
+}
+main > div .voice-row label {
+  margin: 2px 5px;
+}
+main > div .voice-row:first-of-type {
+  margin-top: 20px;
+}
+main button {
+  background-color: transparent;
+  color: #F87060;
+  border: 1px solid #F87060;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  margin: 0 20px;
+  font-family: "Bungee", cursive;
+}
+main button, main label {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,129 @@
+$bg-color: #212121;
+$surface-color: #696977;
+$primary-color: #F87060;
+$text-color: white;
+$title-font: "Bungee", cursive;
+$content-font: "Mullish", sans-serif;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background-color: $bg-color;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: $title-font;
+}
+
+main
+{
+    border: 1px solid $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 35px 10px;
+    margin: 0 100px;
+
+    & > div
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+        border: 1px solid $primary-color;
+        padding: 20px 25px;
+        border-radius: 20px;
+
+        label
+        {
+            margin-bottom: 10px;
+            font-family: $title-font;
+            text-transform: uppercase;
+            color: $primary-color;
+            font-weight: bold;
+        }
+
+        textarea, select
+        {
+            padding: 7px 5px;
+            font-size: 12px;
+            font-family: $content-font;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: transparent;
+            color: $text-color;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        textarea
+        {
+            resize: none;
+        }
+
+        #rand-voice-button
+        {
+            margin-top: 15px;
+        }
+
+        .voice-row
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 0;
+
+            label
+            {
+                margin: 2px 5px;
+            }
+
+            &:first-of-type
+            {
+                margin-top: 20px;
+            }
+
+            #rate-input, #pitch-input
+            {
+                //padding: 7px 5px;
+                //background-color: transparent;
+                //color: $text-color;
+                //border: 1px solid $primary-color;
+                //border-radius: 5px;
+            }
+        }
+    }
+
+    button
+    {
+        background-color: transparent;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 8px 20px;
+        margin: 0 20px;
+        font-family: $title-font;
+    }
+
+    button, label
+    {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+}
